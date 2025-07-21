@@ -1,0 +1,247 @@
+﻿@page "{id}"
+@model Projekt2.Pages.ProductCardModel
+@{
+    ViewData["Title"] = @Model.ProductCard.Name;
+
+    <p>
+        <a href="/Index" id="sciezka">Strona główna</a> &gt; <a href="/ProductsView" id="sciezka">Produkty</a> &gt; <a asp-page="/Kategorie/CategoryProducts" asp-route-categoryId="@Model.ProductCard.CategoryId" id="sciezka">@Model.ProductCard.Category.Name</a>
+    </p>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="~/images/@Model.ProductCard.ImagePath" class="img-fluid" alt="Obrazek">
+        </div>
+        <div class="col-lg-8">
+            <h2>@Model.ProductCard.Name</h2>
+            <p>@Model.ProductCard.Description</p>
+            @*<p>Cena: @Model.ProductCard.Price zł</p>*@
+
+            <p>
+                Cena:
+                @if (Model.ProductCard.Promotion != null)
+                {
+                    var discountedPrice = Model.ProductCard.Price * (1 - Model.ProductCard.Promotion.DiscountPercent / 100m);
+                    <del>@Model.ProductCard.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                }
+                else
+                {
+                    <span>@Model.ProductCard.Price.ToString("F2") zł</span>
+                }
+            </p>
+
+            <form method="post" asp-page-handler="AddToCart">
+                <input type="hidden" name="productId" value="@Model.ProductCard.Id" />
+                <div class="quantity-control-large">
+                    <button type="button" onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantityInput" name="quantity" value="1" readonly>
+                    <button type="button" onclick="increaseQuantity()">+</button>
+                </div>
+                @if (!User.IsInRole("Admin"))
+                {
+                    <button type="submit" class="btn btn-primary">Dodaj do koszyka</button>
+                }
+            </form>
+
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    @if (Model.Products.Any())
+    {
+        <div class="row">
+            <h3>Produkty podobne</h3>
+            @foreach (var product in Model.Products)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="~/images/@product.ImagePath" class="card-img-top" alt="Obrazek">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            @*<p class="card-text">@product.Description</p>*@
+                            @*<p class="card-text">Cena: @product.Price zł</p>*@
+
+                            <p class="card-text">
+                                Cena: 
+                                @if (product.Promotion != null)
+                                {
+                                    var discountedPrice = product.Price * (1 - product.Promotion.DiscountPercent / 100m);
+                                    <del>@product.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                                }
+                                else
+                                {
+                                    <span>@product.Price.ToString("F2") zł</span>
+                                }
+                            </p>
+
+                            <a asp-page="/ProductCard" asp-route-id="@product.Id" class="btn btn-primary">Zobacz</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center mb-3">
+            <p>Brak produktów podobnych</p>
+        </div>
+    }
+
+    <hr class="my-5">
+
+    @if (!User.IsInRole("Admin"))
+    {
+        <div class="row">
+        <h2>Dodaj opinię</h2>
+        <form method="post">
+           @if (User.IsInRole("Klient"))
+                {
+                    <div class="form-group">
+                        <label for="opinion">Opinia:</label>
+                        <textarea class="form-control" id="opinion" name="NewOpinia.Text" rows="4" cols="40" onpropertychange="updateOpinionValue(this.value)" required></textarea>
+                        <span asp-validation-for="NewOpinia.Text" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="rating">Ocena:</label>
+                        <select class="form-control" id="rating" name="NewOpinia.Rating" onpropertychange="updateRatingValue(this.value)" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                }
+                <button type="submit" class="btn btn-primary mb-5">Dodaj opinię</button>
+        </form>
+
+        <script>
+            function updateOpinionValue(value) {
+                document.getElementById("opinionValue").value = value;
+            }
+
+            function updateRatingValue(value) {
+                document.getElementById("ratingValue").value = value;
+            }
+        </script>
+    </div>
+    }
+    
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Opinie</h2>
+            @if (Model.OpinieProduktu.Count == 0)
+            {
+                <div class="mb-3">
+                    <p>Produkt nie posiada jeszcze opinii.</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var opinia in Model.OpinieProduktu)
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="card-text"><small>Dodana: @GetFormattedTime(opinia.CreatedAt)</small></p>
+                            <h5 class="card-title">Autor: @opinia.Client.Name</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ocena: @opinia.Rating</h6>
+                            <p class="card-text">@opinia.Text</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+
+    @functions {
+        public string GetFormattedTime(DateTime createdAt)
+        {
+            TimeSpan timeAgo = DateTime.Now - createdAt;
+            if (timeAgo.TotalMinutes < 1)
+            {
+                return "Przed chwilą";
+            }
+            else if (timeAgo.TotalHours < 1)
+            {
+                int minutes = (int)timeAgo.TotalMinutes;
+                return $"{minutes} {(minutes == 1 ? "minuta" : "minuty")} temu";
+            }
+            else if (timeAgo.TotalDays < 1)
+            {
+                int hours = (int)timeAgo.TotalHours;
+                return $"{hours} {(hours == 1 ? "godzina" : "godziny")} temu";
+            }
+            else
+            {
+                int days = (int)timeAgo.TotalDays;
+                return $"{days} {(days == 1 ? "dzień" : "dni")} temu";
+            }
+        }
+    }
+}
+
+<script>
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById("quantityInput");
+        var quantity = parseInt(quantityInput.value) || 0;
+        quantity = Math.max(quantity - 1, 1);
+        quantityInput.value = quantity;
+    }
+
+    function increaseQuantity() {
+        var quantityInput = document.getElementById("quantityInput");
+        var quantity = parseInt(quantityInput.value) || 0;
+        quantity += 1;
+        quantityInput.value = quantity;
+    }
+</script>
+
+<style>
+    #sciezka
+    {
+        color:black;
+    }
+    #sciezka:hover
+    {
+        text-decoration: underline;
+    }
+
+    .quantity-control-large {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+        .quantity-control-large button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .quantity-control-large input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+            color: #000;
+        }
+</style>

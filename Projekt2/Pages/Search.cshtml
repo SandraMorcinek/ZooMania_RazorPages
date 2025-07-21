@@ -1,0 +1,55 @@
+﻿@page
+@model Projekt2.Pages.SearchModel
+@{
+	ViewData["Title"] = "Szukanie...";
+
+    Func<string, int, string> TruncateText = (text, maxLength) =>
+    {
+        if (text.Length > maxLength)
+        {
+            return text.Substring(0, maxLength) + "...";
+        }
+        return text;
+    };
+
+    @if (Model.Products.Any())
+    {
+        <h2>Znalezione produkty:</h2>
+
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="~/images/@product.ImagePath" class="card-img-top" alt="Obrazek">
+                        <div class="card-body">
+                            <h5 class="card-title">@TruncateText(product.Name, 19)</h5>
+                            @*<p class="card-text">@product.Description</p>*@
+                            @*<p class="card-text">Cena: @product.Price zł</p>*@
+                            <p class="card-text">
+                                Cena:
+                                @if (product.Promotion != null)
+                                {
+                                    var discountedPrice = product.Price * (1 - product.Promotion.DiscountPercent / 100m);
+                                    <del>@product.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                                }
+                                else
+                                {
+                                    <span>@product.Price.ToString("F2") zł</span>
+                                }
+                            </p>
+                            <a asp-page="/ProductCard" asp-route-id="@product.Id" class="btn btn-primary">Zobacz</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center mb-3">
+            <h4>Nie znaleziono produktów spełniających kryteria wyszukiwania.</h4>
+        </div>
+    }
+
+}

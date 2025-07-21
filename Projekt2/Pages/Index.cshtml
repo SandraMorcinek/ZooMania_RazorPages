@@ -1,0 +1,212 @@
+﻿@page
+@using Projekt2.Helper;
+@using Projekt2.Models;
+@using System.Text;
+@model IndexModel
+@{
+    ViewData["Title"] = "Strona główna";
+
+    Func<string, int, string> TruncateText = (text, maxLength) =>
+    {
+        if (text.Length > maxLength)
+        {
+            return text.Substring(0, maxLength) + "...";
+        }
+        return text;
+    };
+
+    // Wygeneruj listę indeksów dla losowych produktów
+        var randomIndexes = Enumerable.Range(0, Model.Products.Count).OrderBy(x => Guid.NewGuid()).Take(6).ToList();
+}
+
+<div class="text-center mb-5">
+    @*<img src="~/images/baner_royal_canin2.jpg" alt="Baner" />*@
+
+    <div id="bannerContainer">
+        <img id="bannerImage" src="" alt="Banner">
+        <ul id="bannerDots">
+            <li id="dot0"></li>
+            <li id="dot1"></li>
+            <li id="dot2"></li>
+        </ul>
+    </div>
+
+    @{
+        // Generuj pełne ścieżki do obrazków
+        var imagePaths = new List<string> {
+        Url.Content("~/images/baner_royal_canin2.jpg"),
+        Url.Content("~/images/baner2.jpg"),
+        Url.Content("~/images/baner3.jpg")
+        };
+    }
+
+</div>
+
+<h2>Najlepiej oceniane produkty</h2>
+
+<div class="row">
+    @foreach (var product in Model.TopRatedProducts.OrderBy(x => Guid.NewGuid()))
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="~/images/@product.ImagePath" class="card-img-top" alt="Obrazek">
+                <div class="card-body">
+                    <h5 class="card-title">@TruncateText(product.Name, 32)</h5>
+                    <div class="card-rating">
+                        @Html.Raw(RatingHelper.GenerateStars(product.AverageRating))
+                    </div>
+                    <p class="card-text">@TruncateText(product.Description, 105)</p>
+                    @*<p class="card-text">Cena: @product.Price zł</p>*@
+                    <p class="card-text">
+                        Cena:
+                        @if (product.Promotion != null)
+                        {
+                            var discountedPrice = product.Price * (1 - product.Promotion.DiscountPercent / 100m);
+                            <del>@product.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                        }
+                        else
+                        {
+                            <span>@product.Price.ToString("F2") zł</span>
+                        }
+                    </p>
+                    <a asp-page="/ProductCard" asp-route-id="@product.Id" class="btn btn-primary">Zobacz</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<h2>Polecane produkty</h2>
+
+<div class="row">
+    @foreach (int index in randomIndexes)
+    {
+        Product product = Model.Products[index];
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="~/images/@product.ImagePath" class="card-img-top" alt="Obrazek">
+                <div class="card-body">
+                    <h5 class="card-title">@TruncateText(product.Name, 32)</h5>
+                    <div class="card-rating">
+                        @Html.Raw(RatingHelper.GenerateStars(product.AverageRating))
+                    </div>
+                    <p class="card-text">@TruncateText(product.Description, 105)</p>
+                    @*<p class="card-text">Cena: @product.Price zł</p>*@
+                    <p class="card-text">
+                        Cena:
+                        @if (product.Promotion != null)
+                        {
+                            var discountedPrice = product.Price * (1 - product.Promotion.DiscountPercent / 100m);
+                            <del>@product.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                        }
+                        else
+                        {
+                            <span>@product.Price.ToString("F2") zł</span>
+                        }
+                    </p>
+                    <a asp-page="/ProductCard" asp-route-id="@product.Id" class="btn btn-primary">Zobacz</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<h2>W promocji</h2>
+
+<div class="row">
+    @foreach (var product in Model.PromotionalProducts.OrderBy(x => Guid.NewGuid()).Take(3).ToList())
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="~/images/@product.ImagePath" class="card-img-top" alt="Obrazek">
+                <div class="card-body">
+                    <h5 class="card-title">@TruncateText(product.Name, 32)</h5>
+                    <div class="card-rating">
+                        @Html.Raw(RatingHelper.GenerateStars(product.AverageRating))
+                    </div>
+                    <p class="card-text">@TruncateText(product.Description, 105)</p>
+                    <p class="card-text">
+                        Cena:
+                        @if (product.Promotion != null)
+                        {
+                            var discountedPrice = product.Price * (1 - product.Promotion.DiscountPercent / 100m);
+                            <del>@product.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                        }
+                        else
+                        {
+                            <span>@product.Price.ToString("F2") zł</span>
+                        }
+                    </p>
+                    <a asp-page="/ProductCard" asp-route-id="@product.Id" class="btn btn-primary">Zobacz</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    // Utwórz tablicę z pełnymi ścieżkami do obrazków
+    var images = @Html.Raw(Json.Serialize(imagePaths));
+
+    var currentIndex = 0;
+
+    // Funkcja do zmiany obrazka/bannera
+    function changeImage() {
+        var bannerImage = document.getElementById("bannerImage");
+        bannerImage.src = images[currentIndex];
+
+        // Aktualizuj aktywny kropek
+        updateActiveDot();
+
+        // Zwiększ indeks lub zresetuj, jeśli osiągnięto koniec tablicy
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Wywołaj funkcję changeImage co 5 sekund
+    setInterval(changeImage, 5000);
+
+    // Funkcja aktualizująca aktywny kropek
+    function updateActiveDot() {
+        var dots = document.querySelectorAll("#bannerDots li");
+
+        // Usuń klasę "active" z wszystkich kropek
+        dots.forEach(function (dot) {
+            dot.classList.remove("active");
+        });
+
+        // Dodaj klasę "active" do aktualnego kropka
+        dots[currentIndex].classList.add("active");
+    }
+
+    var dotElements = document.querySelectorAll("#bannerDots li");
+    dotElements.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+            currentIndex = index;
+            changeImage();
+        });
+    });
+</script>
+
+    <style>
+    #bannerDots {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+        #bannerDots li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        #bannerDots li.active {
+                background-color: #333;
+            }
+
+    </style>

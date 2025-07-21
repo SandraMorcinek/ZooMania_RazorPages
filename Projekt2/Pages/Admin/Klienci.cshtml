@@ -1,0 +1,31 @@
+﻿@page
+@model Projekt2.Pages.Admin.KlienciModel
+@{
+	ViewData["Title"] = "Klienci";
+}
+
+<h2>Klienci</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model.Clients)
+        {
+            <tr>
+                <td>@client.Name</td>
+                <td>@client.LastName</td>
+                <td>@client.Email</td>
+                <td>
+                    <a href="@Url.Page("SzczegolyKlienta", new { clientId = client.Id })" class="btn btn-primary">Pokaż szczegóły</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

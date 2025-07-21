@@ -1,0 +1,185 @@
+﻿@using Projekt2.Helper;
+@{
+    var isAuthenticated = Context.User.Identity.IsAuthenticated;
+    var userName = isAuthenticated ? Context.User.Identity.Name : "Gość";
+}
+@inject CartService CartService
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ZooMania</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Projekt2.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+
+        <div class="naglowek">
+            <div class="container">
+
+                <div class="text-center">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <p style="display: inline-block; color: white; margin-right: -140px; "><strong>Pierwszy raz tutaj? - <a id="zarejestruj_link" asp-area="" asp-page="Klient/Register">Zarejestruj się</a>​ teraz i korzystaj.</strong></p>
+                    }
+                        <div class="user-greeting ml-auto" style=" display: inline-block; float: right; ">
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                            <span style="color: white;">Witaj, <strong>@User.Identity.Name!</strong></span>
+                                @if (User.Identity.AuthenticationType == "MyCookieAuth" && User.IsInRole("Klient"))
+                                {
+                                    <a asp-page="/Klient/Logout" class="btn btn-warning" style="margin-left: 20px;">Wyloguj się</a>
+                                }
+                                else if (User.Identity.AuthenticationType == "MyCookieAuth" && User.IsInRole("Admin"))
+                                {
+                                    <a asp-page="/Admin/Logout" class="btn btn-warning" style="margin-left: 20px;">Wyloguj się</a>
+                                }
+
+                            }
+                            else
+                            {
+                                <a asp-page="/Klient/Login" class="btn btn-success" style="color: white; margin-right: 30px;">Zaloguj się</a>
+                                <a asp-page="/Admin/Login" class="btn btn-danger">Admin</a>
+                            }
+
+                        </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <a href="/Index">
+                            <img src="~/images/logo_pies2_male.png" alt="logo" id="logo" />
+                        </a>
+                    </div>
+                    <div class="col mt-3">
+                        <form method="get" action="/Search" style="max-width: 350px;">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="searchQuery" placeholder="Wyszukaj...">
+                                <button class="btn btn-primary" type="submit">Szukaj</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        @if (User.Identity.AuthenticationType == "MyCookieAuth" && User.IsInRole("Klient"))
+                        {
+                            <div class="col mt-5">
+                                <a asp-page="/Cart" class="btn btn-info" id="koszykC">
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    <span>@await CartService.GetNumberOfItemsAsync() :</span>
+                                    <span>@await CartService.GetTotalCostAsync() zł</span>
+                                </a>
+                            </div>
+                            
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a asp-page="/Cart" class="btn btn-info" id="koszyk">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                <span>@await CartService.GetNumberOfItemsAsync() :</span>
+                                <span>@await CartService.GetTotalCostAsync() zł</span>
+                            </a>
+                        }
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">ZooMania</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        
+                        @if (!User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/ProductsView">Produkty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Kategorie/CategorySummary">Kategorie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/PromotionsView">Promocje</a>
+                            </li>
+                        }
+
+                        @if (User.Identity.AuthenticationType == "MyCookieAuth" && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/ProductsView">Zobacz produkty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Categories">Przeglądaj kategorie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Products">Przeglądaj produkty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Promotions">Zarządzaj promocjami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Klienci">Przeglądaj klientów</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/ZamowieniaAdmin">Przeglądaj zamówienia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Users">Przeglądaj użytkowników</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Register">Dodaj użytkownika</a>
+                            </li>
+                        }
+                        @if (User.Identity.AuthenticationType == "MyCookieAuth" && User.IsInRole("Klient"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Klient/Zamowienia">Zamówienia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Klient/MyAccount">Moje konto</a>
+                            </li>
+                        }
+                        @if (!User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Prywatność</a>
+                            </li>
+                        }
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <p>&copy; 2023 - ZooMania - <a asp-area="" asp-page="/Privacy">Prywatność</a></p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

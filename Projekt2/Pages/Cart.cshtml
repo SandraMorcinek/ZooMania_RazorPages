@@ -1,0 +1,47 @@
+﻿@page
+@model CartModel
+@{
+    ViewData["Title"] = "Koszyk";
+}
+
+<h1>Koszyk</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Produkt</th>
+            <th>Ilość</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td><img src="~/images/@item.Product.ImagePath" id="obr" alt="Obrazek"></td>
+                <td>@item.Product.Name</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" asp-for="@item.Id" name="itemId" />
+                        <button type="submit" name="action" value="increase" class="btn btn-success">+</button>
+                        <button type="submit" name="action" value="decrease" class="btn btn-warning">-</button>
+                        <button type="submit" name="action" value="remove" class="btn btn-danger">Usuń</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.CartItems.Count > 0 && User.IsInRole("Klient"))
+{
+    <a asp-page="/Order" class="btn btn-primary">Przejdź do zamówienia</a>
+}
+else
+{
+    <p>Koszyk jest pusty.</p>
+}
+
+

@@ -1,0 +1,53 @@
+﻿@page "{id}"
+@model Projekt2.Pages.EditProductModel
+@{
+    ViewData["Title"] = "Edycja produktu";
+}
+
+<h1>Edycja produktu</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="EditProduct.Id" />
+
+    <div class="mb-5">
+        <label for="productName" class="form-label">Nazwa</label>
+        <input type="text" id="productName" class="form-control" asp-for="EditProduct.Name" placeholder="Nazwa" required />
+        <span asp-validation-for="EditProduct.Name" class="text-danger"></span>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.EditProduct.ImagePath))
+    {
+        <div class="mb-3">
+            <label class="form-label">Obecne zdjęcie</label>
+            <img src="~/images/@Model.EditProduct.ImagePath" alt="Obrazek" class="img-thumbnail" />
+        </div>
+    }
+
+    <div class="mb-3">
+        <label for="newImageFile" class="form-label">Zmień/Zapisz zdjęcie</label>
+        <input type="file" id="newImageFile" name="NewImageFile" accept="image/*" class="form-control-file" />
+    </div>
+
+    <div class="mb-3">
+        <label for="productDescription" class="form-label">Opis</label>
+        <textarea asp-for="EditProduct.Description" class="form-control" placeholder="Opis" required></textarea>
+        <span asp-validation-for="EditProduct.Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="productCategory" class="form-label">Wybierz kategorię</label>
+        <select id="productCategory" class="form-control" asp-for="SelectedCategory" asp-items="Model.Categories" required >
+            <option value="">Wybierz kategorię</option>
+        </select>
+        <span asp-validation-for="SelectedCategory" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="productPrice" class="form-label">Cena</label>
+        <input type="text" id="productPrice" class="form-control" asp-for="EditProduct.Price" step="any" placeholder="Cena" required />
+        <span asp-validation-for="EditProduct.Price" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-5">Zapisz</button>
+
+</form>

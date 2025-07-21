@@ -1,0 +1,165 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Projekt2
+build_property.RootNamespace = Projekt2
+build_property.ProjectDir = C:\Users\sandr\Desktop\2 rok\Programowanie\Projekt2\Projekt2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\sandr\Desktop\2 rok\Programowanie\Projekt2\Projekt2
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/Klienci.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cS2xpZW5jaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/Promotions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvbW90aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/SzczegolyKlienta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3pjemVnb2x5S2xpZW50YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/SzczegolyUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3pjemVnb2x5VXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Admin/ZamowieniaAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cWmFtb3dpZW5pYUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Kategorie/CategoryProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2F0ZWdvcmllXENhdGVnb3J5UHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Kategorie/CategorySummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2F0ZWdvcmllXENhdGVnb3J5U3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/EditAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XEVkaXRBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XExvZ291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/MyAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XE15QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/Zamowienia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XFphbW93aWVuaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Klient/ZamowienieSzczegoly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xpZW50XFphbW93aWVuaWVTemN6ZWdvbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/PotwierdzenieZamowienia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG90d2llcmR6ZW5pZVphbW93aWVuaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/ProductCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/ProductsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/PromotionsView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvbW90aW9uc1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sandr/Desktop/2 rok/Programowanie/Projekt2/Projekt2/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zpotkyu9pv

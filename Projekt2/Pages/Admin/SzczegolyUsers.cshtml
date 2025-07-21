@@ -1,0 +1,38 @@
+﻿@page
+@model Projekt2.Pages.Admin.SzczegolyUsersModel
+@{
+    ViewData["Title"] = "Szczegóły użytkownika";
+}
+
+<p>
+    <a href="/Admin/Users" id="sciezka">Użytkownicy</a> &gt; @Model.Users.Username
+</p>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">Szczegóły użytkownika: @Model.Users.Username</h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <strong>Imię: </strong> @Model.Users.Name
+            </p>
+            <p class="card-text">
+                <strong>Nazwisko:</strong> @Model.Users.Lastname
+            </p>
+            <p class="card-text">
+                <strong>E-mail:</strong> @Model.Users.Email
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    #sciezka {
+        color: black;
+    }
+
+        #sciezka:hover {
+            text-decoration: underline;
+        }
+</style>

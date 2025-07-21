@@ -1,0 +1,105 @@
+﻿@page
+@using Projekt2.Models;
+@model Projekt2.Pages.ProductsModel
+@{
+	ViewData["Title"] = "Dodaj/Edytuj produkty";
+
+	<h1>Produkty</h1>
+
+	<form method="post" enctype="multipart/form-data">
+		@*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+		<div class="mb-3">
+			<label for="productName" class="form-label">Nazwa</label>
+			<input type="text" id="productName" class="form-control" asp-for="NewProduct.Name" placeholder="Nazwa" />
+			<span asp-validation-for="NewProduct.Name" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="productImage" class="form-label">Zdjęcie</label>
+			<input type="file" id="productImage" name="imageFile" accept="image/*" class="form-control-file" />
+			<span asp-validation-for="NewProduct.ImagePath" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="productDescription" class="form-label">Opis</label>
+			<textarea asp-for="NewProduct.Description" id="productDescription" class="form-control" name="NewProduct.Description" placeholder="Opis"></textarea>
+			<span asp-validation-for="NewProduct.Description" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="productCategory" class="form-label">Wybierz kategorię</label>
+			<select id="productCategory" class="form-control" asp-for="NewProduct.CategoryId">
+				<option value="0">Wybierz kategorię</option>
+				@foreach (var category in Model.Categories)
+				{
+					<option value="@category.Id">@category.Name</option>
+				}
+			</select>
+			<span asp-validation-for="NewProduct.CategoryId" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="productPrice" class="form-label">Cena</label>
+			<input type="number" id="productPrice" class="form-control" asp-for="NewProduct.Price" placeholder="Cena" step="any" />
+			<span asp-validation-for="NewProduct.Price" class="text-danger"></span>
+		</div>
+
+		<button type="submit" class="btn btn-primary mb-3">Dodaj</button>
+	</form>
+
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nazwa</th>
+					<th>Zdjęcie</th>
+					<th>Opis</th>
+					<th>Cena</th>
+					<th>Kategoria</th>
+					<th>Edytuj</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (Product product in Model.Products)
+				{
+					<tr>
+						<td>
+							@product.Id
+						</td>
+						<td>
+							@product.Name
+						</td>
+						<td>
+							<img src="~/images/@product.ImagePath" alt="Obrazek" id="obr"/>
+						</td>
+						<td>
+							@product.Description
+						</td>
+						<td style="white-space: nowrap;">
+							@*@product.Price zł*@
+
+							@if (product.Promotion != null)
+							{
+								var discountedPrice = product.Price * (1 - product.Promotion.DiscountPercent / 100m);
+								<del>@product.Price.ToString("F2") zł</del> <br/> <strong>@discountedPrice.ToString("F2") zł</strong>
+							}
+							else
+							{
+								<span>@product.Price.ToString("F2") zł</span>
+							}
+						</td>
+						<td>
+							@product.Category.Name
+						</td>
+						<td>
+							<a href="/EditProduct/@product.Id" class="btn btn-primary">Edytuj</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+
+}

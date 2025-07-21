@@ -1,0 +1,64 @@
+﻿@page
+@model Projekt2.Pages.Klient.ZamowieniaModel
+@{
+    ViewData["Title"] = "Zamówienia";
+}
+
+<p>
+    <a href="/Index" id="sciezka">Strona główna</a> &gt; <a href="/Klient/MyAccount" id="sciezka">Moje konto</a> &gt; <a href="/Klient/Zamowienia" id="sciezka">Zamówienia</a>
+</p>
+
+@if (Model.Orders.Any())
+{
+    <h2>Twoje zamówienia</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numer zamówienia</th>
+                <th>Data zamówienia</th>
+                <th>Status</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Orders)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.OrderDate.ToString("d")</td>
+                    <td>@order.Status</td>
+                    <td>
+                        @if (order.Status == "Nowe")
+                        {
+                            <form method="post" asp-page-handler="CancelOrder">
+                                <input type="hidden" name="orderId" value="@order.Id" />
+                                <button type="submit" class="btn btn-danger">Anuluj zamówienie</button>
+                            </form>
+                        }
+                    </td>
+                    <td>
+                        <a asp-page="/Klient/ZamowienieSzczegoly" asp-route-orderId="@order.Id" class="btn btn-primary">Szczegóły</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="text-center mb-3">
+        <h4>Brak zamówień</h4>
+    </div>
+}
+
+<style>
+    #sciezka {
+        color: black;
+    }
+
+        #sciezka:hover {
+            text-decoration: underline;
+        }
+</style>

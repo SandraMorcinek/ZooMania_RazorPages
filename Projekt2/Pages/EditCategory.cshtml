@@ -1,0 +1,24 @@
+﻿@page "{id}"
+@model Projekt2.Pages.EditCategoryModel
+@{
+	ViewData["Title"] = "Edycja kategorii";
+
+	<h1>Edycja kategorii</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="EditCategory.Id" />
+
+        <div class="mb-3">
+            <label for="categoryName" class="form-label">Nazwa</label>
+            <input type="text" id="categoryName" class="form-control" asp-for="EditCategory.Name" placeholder="Nazwa" />
+            <span asp-validation-for="EditCategory.Name" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+
+        
+    </form>
+
+
+
+}

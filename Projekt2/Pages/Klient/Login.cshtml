@@ -1,0 +1,31 @@
+﻿@page
+@model Projekt2.Pages.Klient.LoginModel
+@{
+	ViewData["Title"] = "Logowanie";
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">Logowanie</h1>
+                <form method="post" asp-page-handler="OnPostAsync">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="form-group mb-3">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" name="Email" maxlength="30" placeholder="E-mail" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="password">Hasło</label>
+                        <input type="password" class="form-control" id="password" name="Password" minlength="3" maxlength="20" placeholder="Hasło" required />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block mb-5">Zaloguj się</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+}

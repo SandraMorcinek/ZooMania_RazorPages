@@ -1,0 +1,45 @@
+﻿@page
+@using Projekt2.Helper;
+@model Projekt2.Pages.PromotionsViewModel
+@{
+	ViewData["Title"] = "Promocje";
+
+    Func<string, int, string> TruncateText = (text, maxLength) =>
+    {
+        if (text.Length > maxLength)
+        {
+            return text.Substring(0, maxLength) + "...";
+        }
+        return text;
+    };
+
+	<h2>Produkty w promocji</h2>
+
+    if (!Model.PromotionalProducts.Any())
+    {
+        <p>Brak produktów w promocji</p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in Model.PromotionalProducts)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="~/images/@product.ImagePath" class="card-img-top" alt="Obrazek">
+                        <div class="card-body">
+                            <h5 class="card-title">@TruncateText(product.Name, 19)</h5>
+                            <div class="card-rating">
+                                @Html.Raw(RatingHelper.GenerateStars(product.AverageRating))
+                            </div>
+                            <p class="card-text">@TruncateText(product.Description, 88)</p>
+                            <p class="card-text">Cena: <s>@product.Price zł</s></p>
+                            <p class="card-text">Cena promocyjna: @((product.Price * (1 - product.Promotion.DiscountPercent / 100m)).ToString("F2")) zł</p>
+                            <a asp-page="/ProductCard" asp-route-id="@product.Id" class="btn btn-primary">Zobacz</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}

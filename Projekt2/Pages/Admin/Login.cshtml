@@ -1,0 +1,34 @@
+﻿@page
+@model Projekt2.Pages.Admin.LoginModel
+@{
+	ViewData["Title"] = "Admin - Logowanie";
+}
+
+<div class="container border" style="padding: 20px;">
+    <form method="post">
+        <div class="form-group row mb-2">
+            <div class="col-2">
+                <label for="username">Login</label>
+            </div>
+            <div class="col-5">
+                <input type="text" id="username" name="Username" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Username"></span>
+        </div>
+        <div class="form-group row mb-3">
+            <div class="col-2">
+                <label for="password">Hasło</label>
+            </div>
+            <div class="col-5">
+                <input type="password" id="password" name="Password" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group row mb-3">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Zaloguj" />
+            </div>
+        </div>
+
+	</form>
+</div>

@@ -1,0 +1,51 @@
+﻿@page
+@model Projekt2.Pages.Admin.ZamowieniaAdminModel
+@{
+    ViewData["Title"] = "Zamówienia - Admin";
+}
+
+<h2>Zamówienia</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Numer zamówienia</th>
+            <th>Data zamówienia</th>
+            <th>Status</th>
+            <th>Klient</th>
+            <th>Szczegóły zamówienia</th>
+            <th>Zmień status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model.Orders)
+        {
+            <tr>
+                <td>#@order.Id</td>
+                <td>@order.OrderDate.ToString("d")</td>
+                <td>@order.Status</td>
+                <td>@order.Client.Name</td>
+                <td>
+                    <ul>
+                        @foreach (var item in order.OrderItems)
+                        {
+                            <li>@item.Product.Name, Ilość: @item.Quantity</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <form method="post" asp-page-handler="ChangeStatus">
+                        <input type="hidden" name="orderId" value="@order.Id" />
+                        <select name="newStatus">
+                            <option value="Nowe">Nowe</option>
+                            <option value="W trakcie">W trakcie</option>
+                            <option value="Zrealizowane">Zrealizowane</option>
+                            <option value="Anulowane">Anulowane</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Zmień status</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,55 @@
+﻿@page
+@model Projekt2.Pages.Admin.PromotionsModel
+@{
+	ViewData["Title"] = "Zarządzaj promocjami";
+
+    var promotionalProducts = Model.Products.Where(p => p.Promotion != null).ToList();
+}
+
+<h1>Zarządzaj promocjami</h1>
+
+<form method="post" asp-page-handler="Add" class="mb-3">
+    <div class="form-group mb-1">
+        <label for="SelectedProductId">Produkt:</label>
+        <select asp-for="SelectedProductId" asp-items="@(new SelectList(Model.Products.Where(p => p.Promotion == null), "Id", "Name"))" class="form-control"></select>
+    </div>
+    <div class="form-group mb-3">
+        <label for="DiscountPercent">Zniżka (%):</label>
+        <input asp-for="DiscountPercent" type="number" min="5" max="100" step="1" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Dodaj do promocji</button>
+</form>
+
+@if (!promotionalProducts.Any())
+{
+    <p>Brak produktów w promocji</p>
+}
+else
+{
+    <h2>Produkty w promocji</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Zniżka</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in promotionalProducts)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Promotion.DiscountPercent %</td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="promotionId" value="@product.Promotion.Id" />
+                            <button type="submit" asp-page-handler="Remove" class="btn btn-danger">Usuń z promocji</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

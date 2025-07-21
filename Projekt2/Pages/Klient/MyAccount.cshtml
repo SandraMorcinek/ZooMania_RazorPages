@@ -1,0 +1,70 @@
+﻿@page
+@model Projekt2.Pages.Klient.MyAccountModel
+@{
+    ViewData["Title"] = "Moje konto";
+}
+
+<p>
+    <a href="/Index" id="sciezka">Strona główna</a> &gt; <a href="/Klient/MyAccount" id="sciezka">Moje konto</a>
+</p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Dane klienta</h5>
+                </div>
+                <div class="card-body">
+                    <p>Imię: @Model.Client.Name</p>
+                    <p>Nazwisko: @Model.Client.LastName</p>
+                    <p>Email: @Model.Client.Email</p>
+                    <p>Telefon: 
+                        @if (string.IsNullOrEmpty(Model.Client.Phone))
+                        {
+                            <span>Brak</span>
+                        }
+                        else
+                        {
+                            <span>@Model.Client.Phone</span>
+                        }
+                    </p>
+                    <a asp-page="/Klient/EditAccount" class="btn btn-primary">Edytuj dane</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Zamówienia</h5>
+                </div>
+                <div class="card-body">
+                    <p>Ilość złożonych zamówień: @Model.Orders.Count</p>
+                    <ul class="list-group">
+                        @foreach (var order in Model.Orders)
+                        {
+                            <li class="list-group-item">
+                                <a asp-page="/Klient/ZamowienieSzczegoly" asp-route-orderId="@order.Id" id="zamowienie">Zamówienie #@order.Id</a> - @order.Status
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #sciezka, #zamowienie {
+        color: black;
+    }
+
+    #sciezka:hover {
+        text-decoration: underline;
+    }
+
+    #zamowienie:hover
+    {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,85 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#logo {
+    height: 150px;
+}
+
+.naglowek {
+    padding-top: 20px;
+    background-color: darkslategrey;
+}
+
+#wyszukaj {
+    margin-left: 40px;
+    border-radius: 10px;
+    width: 350px;
+    border: solid 1px black;
+    padding: 8px 15px;
+}
+
+#wyszukaj_submit {
+    border-radius: 10px;
+    color: white;
+    background-color: darkslategrey;
+    border: solid 1px white;
+    padding: 8px 15px;
+}
+
+#wyszukaj_submit:hover {
+    background-color: seagreen;
+}
+
+#koszyk {
+    margin-top: 10px;
+    float: right;
+    color: white;
+}
+#koszykC {
+    margin-right: -90px;
+    float: right;
+    color: white;
+}
+
+.zarejestruj {
+    text-align: right;
+    color: white;
+}
+
+#zarejestruj_link {
+    color: white;
+    text-decoration: underline;
+}
+
+#obr {
+    height: 100px;
+}
+
+footer {
+    background-color: darkslategrey;
+}
+
+footer p, a {
+    color: white;
+    text-decoration: none;
+}

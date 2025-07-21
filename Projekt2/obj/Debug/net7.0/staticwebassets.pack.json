@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Projekt2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Projekt2.rhuz6p1uwl.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\323aa261-4401-4307-89c1-af71450da700_Royal Canin Medium Adult.jpg",
+      "PackagePath": "staticwebassets\\images\\323aa261-4401-4307-89c1-af71450da700_Royal Canin Medium Adult.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\5d0d5bd3-007b-4e1a-8724-1a93cffb7803_Karma sucha dla kotów Purina ONE Sterilcat, 3 kg.jpg",
+      "PackagePath": "staticwebassets\\images\\5d0d5bd3-007b-4e1a-8724-1a93cffb7803_Karma sucha dla kotów Purina ONE Sterilcat, 3 kg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\5dd23df4-efef-4956-a253-a6bd28bfcb43_56858_pla_dentastix_fresh_7_stk_kleinehunde_4.jpg",
+      "PackagePath": "staticwebassets\\images\\5dd23df4-efef-4956-a253-a6bd28bfcb43_56858_pla_dentastix_fresh_7_stk_kleinehunde_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\7289da9a-4672-4180-b5c4-dfcda45ea426_202196_pla_trixie_premium_halsband_extrabreite_neopren_polsterung_hs_01_3.jpg",
+      "PackagePath": "staticwebassets\\images\\7289da9a-4672-4180-b5c4-dfcda45ea426_202196_pla_trixie_premium_halsband_extrabreite_neopren_polsterung_hs_01_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\7e1112f0-c29e-4966-9af8-f663eaa98b14_355697_pla_mars_multipack_whiskas_duo_portionsbeutel_classiccombos_gelee_48x85g_hs_01_2.jpg",
+      "PackagePath": "staticwebassets\\images\\7e1112f0-c29e-4966-9af8-f663eaa98b14_355697_pla_mars_multipack_whiskas_duo_portionsbeutel_classiccombos_gelee_48x85g_hs_01_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\80a516ce-1a29-4716-81eb-4d9b1b0a3dc0_Royal Canin Maxi Adult.jpg",
+      "PackagePath": "staticwebassets\\images\\80a516ce-1a29-4716-81eb-4d9b1b0a3dc0_Royal Canin Maxi Adult.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\85348ca5-e340-4dc9-8e52-40a06cb642c6_27908_PLA_Trixie_Schaf_Hundespielzeug_ca__30_cm_Schaf_2.jpg",
+      "PackagePath": "staticwebassets\\images\\85348ca5-e340-4dc9-8e52-40a06cb642c6_27908_PLA_Trixie_Schaf_Hundespielzeug_ca__30_cm_Schaf_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\8cf91337-30bb-4149-94af-74c3fbc5d424_Purina Pro Plan Medium Adult Sensitive Skin 7kg.jpg",
+      "PackagePath": "staticwebassets\\images\\8cf91337-30bb-4149-94af-74c3fbc5d424_Purina Pro Plan Medium Adult Sensitive Skin 7kg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\949d3d03-35d5-4631-a1f5-13b10f014041_50039_PLA_Taste_of_the_Wild___Canyon_River_Feline___2_27_kg_5.jpg",
+      "PackagePath": "staticwebassets\\images\\949d3d03-35d5-4631-a1f5-13b10f014041_50039_PLA_Taste_of_the_Wild___Canyon_River_Feline___2_27_kg_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\9659ebee-a8f0-4a9d-8d15-db4f340c5dfc_74671_pla_orthopaedisches_hundebett_eckig_fg_2899_3.jpg",
+      "PackagePath": "staticwebassets\\images\\9659ebee-a8f0-4a9d-8d15-db4f340c5dfc_74671_pla_orthopaedisches_hundebett_eckig_fg_2899_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\9f6d3f8a-ffcc-4cae-a0a0-24dbc8f31f92_108496_pla_savic_katzentoilette_nestor_earthblue_hs_01_7.jpg",
+      "PackagePath": "staticwebassets\\images\\9f6d3f8a-ffcc-4cae-a0a0-24dbc8f31f92_108496_pla_savic_katzentoilette_nestor_earthblue_hs_01_7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\a015db21-e4ca-4b16-af2b-091f3e665971_NS-ACANA-Heritage-Dog-Adult-Front-Right-17kg.jpg",
+      "PackagePath": "staticwebassets\\images\\a015db21-e4ca-4b16-af2b-091f3e665971_NS-ACANA-Heritage-Dog-Adult-Front-Right-17kg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\baner2.jpg",
+      "PackagePath": "staticwebassets\\images\\baner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\baner3.jpg",
+      "PackagePath": "staticwebassets\\images\\baner3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\baner_royal_canin.jpg",
+      "PackagePath": "staticwebassets\\images\\baner_royal_canin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\baner_royal_canin2.jpg",
+      "PackagePath": "staticwebassets\\images\\baner_royal_canin2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\c837c6fc-5a07-4b18-bf96-e7c92d3be6c6_Eukanuba-Adult-Medium-Breed,-kurczak-15kg.jpg",
+      "PackagePath": "staticwebassets\\images\\c837c6fc-5a07-4b18-bf96-e7c92d3be6c6_Eukanuba-Adult-Medium-Breed,-kurczak-15kg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\cc2d4997-fa8c-4d17-a242-a2cd94020376_448958_katzenh_hle_eule_dsc0329_6.jpg",
+      "PackagePath": "staticwebassets\\images\\cc2d4997-fa8c-4d17-a242-a2cd94020376_448958_katzenh_hle_eule_dsc0329_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\cd5a3872-3407-4ce3-8000-4356b40ad233_82042_pla_brit_premiumbynature_adult_l_15kg_5.jpg",
+      "PackagePath": "staticwebassets\\images\\cd5a3872-3407-4ce3-8000-4356b40ad233_82042_pla_brit_premiumbynature_adult_l_15kg_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\ee44cd69-bb25-4c0f-91fc-9ac6bc09dbe9_Karmnik dla ptaków.jpg",
+      "PackagePath": "staticwebassets\\images\\ee44cd69-bb25-4c0f-91fc-9ac6bc09dbe9_Karmnik dla ptaków.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\f37baa3e-fa85-4492-b642-80dcb382204b_55405_PLA_Katzenspielzeug_Maus_mit_Katzenminze_und_Stimme_FG_DSC0500_5.jpg",
+      "PackagePath": "staticwebassets\\images\\f37baa3e-fa85-4492-b642-80dcb382204b_55405_PLA_Katzenspielzeug_Maus_mit_Katzenminze_und_Stimme_FG_DSC0500_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\f3f34ec1-c767-4e33-a632-f3e4cbb60f1e_Royal Canin Sterilised 37.jpg",
+      "PackagePath": "staticwebassets\\images\\f3f34ec1-c767-4e33-a632-f3e4cbb60f1e_Royal Canin Sterilised 37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\logo_pies2_male.png",
+      "PackagePath": "staticwebassets\\images\\logo_pies2_male.png"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\stopka-ikony\\mail.png",
+      "PackagePath": "staticwebassets\\images\\stopka-ikony\\mail.png"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\images\\stopka-ikony\\tel.png",
+      "PackagePath": "staticwebassets\\images\\stopka-ikony\\tel.png"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sandr\\Desktop\\2 rok\\Programowanie\\Projekt2\\Projekt2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Projekt2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Projekt2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Projekt2.props",
+      "PackagePath": "build\\Projekt2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Projekt2.props",
+      "PackagePath": "buildMultiTargeting\\Projekt2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Projekt2.props",
+      "PackagePath": "buildTransitive\\Projekt2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

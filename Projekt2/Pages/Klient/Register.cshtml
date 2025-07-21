@@ -1,0 +1,54 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Projekt2.Pages.Klient.RegisterModel
+@{
+	ViewData["Title"] = "Zarejestruj się";
+
+	<h1>Rejestracja</h1>
+
+	<form method="post" class="needs-validation" novalidate>
+
+		@if (TempData["SuccessMessage"] != null)
+		{
+			<div class="alert alert-success">
+				@TempData["SuccessMessage"]
+			</div>
+		}
+
+		<span asp-validation-summary="All"></span>
+		<div class="mb-3">
+			<label for="name" class="form-label">Imię</label>
+			<input type="text" class="form-control" id="name" name="NewClient.Name" maxlength="20" placeholder="Imię" required />
+			<span asp-validation-for="NewClient.Name" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="lastName" class="form-label">Nazwisko</label>
+			<input type="text" class="form-control" id="lastName" name="NewClient.LastName" maxlength="50" placeholder="Nazwisko" required />
+			<span asp-validation-for="NewClient.LastName" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="email" class="form-label">E-mail</label>
+			<input type="email" class="form-control" id="email" name="NewClient.Email" maxlength="30" placeholder="E-mail" required />
+			<span asp-validation-for="NewClient.Email" class="text-danger"></span>
+
+		</div>
+
+		<div class="mb-3">
+			<label for="phone" class="form-label">Telefon (pole opcjonalne)</label>
+			<input type="text" class="form-control" id="phone" name="NewClient.Phone" maxlength="20" placeholder="Numer telefonu" />
+			<span asp-validation-for="NewClient.Phone" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label for="password" class="form-label">Hasło</label>
+			<input type="password" class="form-control" id="password" name="NewClient.Password" minlength="3" maxlength="20" placeholder="Hasło" required />
+			<span asp-validation-for="NewClient.Password" class="text-danger"></span>
+		</div>
+
+		<button type="submit" class="btn btn-primary mb-5">Załóż konto</button>
+	</form>
+
+
+}

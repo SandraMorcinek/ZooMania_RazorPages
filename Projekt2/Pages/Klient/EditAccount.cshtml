@@ -1,0 +1,51 @@
+﻿@page
+@model Projekt2.Pages.Klient.EditAccountModel
+@{
+    ViewData["Title"] = "Edycja danych";
+}
+
+<p>
+    <a href="/Index" id="sciezka">Strona główna</a> &gt; <a href="/Klient/MyAccount" id="sciezka">Moje konto</a> &gt; <a href="/Klient/EditAccount" id="sciezka">Edycja danych</a>
+</p>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h5>Edytuj dane</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <input asp-for="Client.Id" type="hidden" />
+                <div class="form-group">
+                    <label>Imię</label>
+                    <input type="text" asp-for="Client.Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Nazwisko</label>
+                    <input type="text" asp-for="Client.LastName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" asp-for="Client.Email" class="form-control" />
+                </div>
+                <div class="form-group mb-3">
+                    <label>Telefon</label>
+                    <input type="tel" asp-for="Client.Phone" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Zaktualizuj dane</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    #sciezka {
+        color: black;
+    }
+
+        #sciezka:hover {
+            text-decoration: underline;
+        }
+</style>

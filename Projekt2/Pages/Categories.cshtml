@@ -1,0 +1,48 @@
+﻿@page
+@using Projekt2.Models;
+@model Projekt2.Pages.CategoriesModel
+@{
+	ViewData["Title"] = "Kategorie";
+
+	<h1>Kategorie</h1>
+
+	<form method="post">
+
+		<div class="mb-3">
+			<label for="categoryName" class="form-label">Nazwa kategorii</label>
+			<input type="text" id="categoryName" class="form-control" asp-for="NewCategory.Name" placeholder="Nazwa kategorii" />
+			<span asp-validation-for="NewCategory.Name" class="text-danger"></span>
+		</div>
+
+		<button type="submit" class="btn btn-primary mb-4">Dodaj</button>
+
+	</form>
+
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nazwa</th>
+					<th>Edytuj</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach(Category category in Model.Categories)
+				{
+					<tr>
+						<td>
+							@category.Id
+						</td>
+						<td>
+							@category.Name
+						</td>
+						<td>
+							<a href="/EditCategory/@category.Id" class="btn btn-primary">Edytuj</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+}

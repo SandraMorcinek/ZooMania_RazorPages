@@ -1,0 +1,63 @@
+﻿@page
+@model Projekt2.Pages.OrderModel
+@{
+	ViewData["Title"] = "Zamówienie";
+}
+
+<h2>Zamówienie</h2>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Zdjęcie</th>
+                        <th>Nazwa Produktu</th>
+                        <th>Ilość</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CartItems)
+                    {
+                        <tr>
+                            <td><img src="~/images/@item.Product.ImagePath" id="obr" alt="Obrazek"></td>
+                            <td>@item.Product.Name</td>
+                            <td>@item.Quantity</td>
+                            @*<td>@item.Product.Price</td>*@
+                            <td>
+                                @if (item.Product.Promotion != null)
+                                {
+                                    var discountedPrice = item.Product.Price * (1 - item.Product.Promotion.DiscountPercent / 100m);
+                                    <del>@item.Product.Price.ToString("F2") zł</del> <strong>@discountedPrice.ToString("F2") zł</strong>
+                                }
+                                else
+                                {
+                                    <span>@item.Product.Price.ToString("F2") zł</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h4>Wybierz transport</h4>
+            <select class="form-control" name="transport">
+                <option value="0">Odbiór osobisty (0 zł)</option>
+                <option value="10">Pocztex kurier (10 zł)</option>
+                <option value="20">Ekspresowy kurier (20 zł)</option>
+            </select>
+            <br />
+            <button type="submit" class="btn btn-primary">Złóż zamówienie</button>
+        </div>
+    </div>
+</form>
+
+<!-- Do obsługi walidacji klienta -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

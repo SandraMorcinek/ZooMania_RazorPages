@@ -1,0 +1,65 @@
+﻿@page
+@using System.Globalization;
+@model Projekt2.Pages.Klient.ZamowienieSzczegolyModel
+@{
+	ViewData["Title"] = "Szczegóły zamówienia";
+}
+
+<p>
+    <a href="/Index" id="sciezka">Strona główna</a> &gt; <a href="/Klient/MyAccount" id="sciezka">Moje konto</a> &gt; <a href="/Klient/Zamowienia" id="sciezka">Zamówienia</a> &gt; Zamówienie #@Model.Order.Id
+</p>
+
+<h2>Szczegóły zamówienia</h2>
+
+<p>Numer zamówienia: @Model.Order.Id</p>
+<p>Data zamówienia: @Model.Order.OrderDate.ToString("d")</p>
+<p>Status: @Model.Order.Status</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Nazwa Produktu</th>
+            <th>Ilość</th>
+            <th>Cena</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr>
+                <td><img src="~/images/@item.Product.ImagePath" id="obr" alt="Obrazek"></td>
+                <td>@item.Product.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.PriceAtPurchase.ToString("F2") zł</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Koszt transportu:</td>
+            <td></td>
+            <td>@Model.Order.Transport zł</td>
+        </tr>
+        <tr>
+            <td colspan="2">Całkowity koszt:</td>
+            <td></td>
+            <td>
+                @{
+                    decimal totalCost = Model.OrderItems.Sum(item => item.PriceAtPurchase * item.Quantity) + Model.Order.Transport;
+                }
+                @(totalCost.ToString("F2")) zł
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    #sciezka {
+        color: black;
+    }
+
+    #sciezka:hover {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,38 @@
+﻿@page
+@model Projekt2.Pages.PotwierdzenieZamowieniaModel
+@{
+    ViewData["Title"] = "Potwierdzenie zamówienia";
+}
+
+<h2>Potwierdzenie zamówienia</h2>
+
+<p>Dziękujemy za złożenie zamówienia. Poniżej znajdują się szczegóły Twojego zamówienia.</p>
+
+<h4>Informacje o zamówieniu:</h4>
+<p>Numer zamówienia: @Model.Order.Id</p>
+<p>Data zamówienia: @Model.Order.OrderDate.ToString("d")</p>
+<p>Status zamówienia: @Model.Order.Status</p>
+<p>Metoda transportu: @Model.Order.Transport</p>
+
+<h4>Szczegóły zamówienia:</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Nazwa produktu</th>
+            <th>Ilość</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr>
+                <td><img src="~/images/@item.Product.ImagePath" id="obr" alt="Obrazek"></td>
+                <td>@item.Product.Name</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>Zostaniesz powiadomiony/a, gdy Twoje zamówienie zostanie wysłane.</p>

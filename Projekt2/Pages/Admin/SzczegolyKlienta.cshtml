@@ -1,0 +1,42 @@
+﻿@page
+@model Projekt2.Pages.Admin.SzczegolyKlientaModel
+@{
+    ViewData["Title"] = "Szczegóły Klienta";
+}
+
+<p>
+    <a href="/Admin/Klienci" id="sciezka">Klienci</a> &gt; @Model.Client.Name @Model.Client.LastName
+</p>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">Szczegóły Klienta: @Model.Client.Name @Model.Client.LastName</h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>E-mail:</strong> @Model.Client.Email</p>
+            <p class="card-text">
+                <strong>Numer telefonu:</strong>
+                @if (string.IsNullOrEmpty(Model.Client.Phone))
+                {
+                    <span>Brak</span>
+                }
+                else
+                {
+                    <span>@Model.Client.Phone</span>
+                }
+            </p>
+            <p class="card-text"><strong>Liczba zamówień:</strong> @Model.OrderCount</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    #sciezka {
+        color: black;
+    }
+
+        #sciezka:hover {
+            text-decoration: underline;
+        }
+</style>
